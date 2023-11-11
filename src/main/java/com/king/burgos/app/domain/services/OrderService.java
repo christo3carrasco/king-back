@@ -3,6 +3,7 @@ package com.king.burgos.app.domain.services;
 import com.king.burgos.app.domain.dto.OrderDTO;
 import com.king.burgos.app.domain.entities.Order;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,4 +20,6 @@ public interface OrderService {
     Optional<Order> readOrderId(int id);
 
     List<Order> readOrderUser(int userId);
+
+    List<Order> readOrderDate(Date date);
 }

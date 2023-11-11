@@ -6,6 +6,7 @@ import com.king.burgos.app.infrastructure.repositories.OrderRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,5 +49,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> readOrderUser(int userId) {
         return orderRepository.readOrderUser(userId);
+    }
+
+    @Override
+    public List<Order> readOrderDate(Date date) {
+        return orderRepository.readOrderDate(date);
     }
 }

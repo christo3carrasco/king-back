@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,5 +49,10 @@ public class OrderControllerImpl implements OrderController {
     @Override
     public List<Order> getOrderUser(int userId) {
         return orderService.readOrderUser(userId);
+    }
+
+    @Override
+    public List<Order> getOrderDate(Date date) {
+        return orderService.readOrderDate(date);
     }
 }
